@@ -33,7 +33,7 @@ public class GlassHelmet extends JavaPlugin implements Listener {
             if (e.getClickedBlock().getType().equals(Material.GLASS)) {
                 if (e.getPlayer().getInventory().getHelmet() == null) {
                     e.getPlayer().getInventory().setHelmet(glass);
-                    e.getPlayer().sendMessage("§6New hat!");
+                    e.getPlayer().updateInventory();
                     e.setCancelled(true);
                 }
                 if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
